@@ -1,11 +1,9 @@
- import React from 'react'
- import { useLocation , useNavigate  } from 'react-router'
- export default function 
- () {
+import { useLocation , useNavigate  } from 'react-router'
+export default function Header() {
     const location = useLocation();
     const navigate = useNavigate();
     function pathMatchRoute(route){
-          if(route === location.pathname  ){
+          if(route === location.pathname){
             return true
           }
     }
@@ -22,9 +20,9 @@
      </div>
      <div>
         <ul className="flex space-x-10">
-            <li className={` cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${pathMatchRoute("/") && "text-black border-b-red-500 "}`}  onClick = {()=>navigate("/")}>Home</li>
-            <li  className={` cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${pathMatchRoute("/offers") && "text-black border-b-red-500 "}`}  onClick = {()=>navigate("/offers")}>Offers</li>
-            <li  className={` cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${pathMatchRoute("/sign_in") && "text-black border-b-red-500 "}`}  onClick = {()=>navigate("/sign_in")}>Sign In</li>
+            <li className={` cursor-pointer py-3 text-sm font-semibold text-grey-400 ${pathMatchRoute("/") && "border-b-[3px] text-black border-b-red-500 "}`}  onClick = {()=>navigate("/")}>Home</li>
+            <li  className={` cursor-pointer py-3 text-sm font-semibold text-grey-400  ${pathMatchRoute("/offers") && "border-b-[3px] text-black border-b-red-500 "}`}  onClick = {()=>navigate("/offers")}>Offers</li>
+            <li  className={` cursor-pointer py-3 text-sm font-semibold text-grey-400   ${pathMatchRoute("/sign_in") && "border-b-[3px] text-black border-b-red-500 "}`}  onClick = {()=>navigate("/sign_in")}>Sign In</li>
          
         </ul>
      </div>
