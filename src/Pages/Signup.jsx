@@ -13,7 +13,7 @@ export default function SignUp() {
     name: "",
     email: "",
     password: "",
-  });
+  }); 
   const { name, email, password } = formData;
   const navigate = useNavigate();
   
