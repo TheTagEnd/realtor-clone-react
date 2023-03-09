@@ -22,12 +22,16 @@ function App() {
          <Route path="/profile" element={<Profile></Profile>} /> 
 
         </Route>
-        <Route path="/create-listing" element = {<CreateListening></CreateListening>} />
+      
         <Route path="/sign_in" element={<SignIn></SignIn>} /> 
         <Route path="/sign_up" element={<Signup></Signup>} /> 
         <Route path="/forgot_password" element={<ForgotPassword></ForgotPassword>} /> 
         <Route path="/offers" element={<Offers></Offers>} /> 
+        <Route path="/create-listing" element={<PrivateRoute></PrivateRoute> } >
+        
+        <Route path="/create-listing" element={<CreateListening></CreateListening>} /> 
 
+       </Route>
       </Routes>
      </Router>
      <ToastContainer
